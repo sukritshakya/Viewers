@@ -2298,7 +2298,15 @@
   resolved "https://registry.yarnpkg.com/@cornerstonejs/codec-openjpeg/-/codec-openjpeg-0.1.1.tgz#5bd1c52a33a425299299e970312731fa0cc2711b"
   integrity sha512-HOMMOLV6xy8O/agNGGvrl0a8DwShpBvWxAzEzv2pqq12d3r5z/3MyIgNA3Oj/8bIBVvvVXxh9RX7rMDRHJdowg==
 
-"@cornerstonejs/core@^0.15.3":
+"@cornerstonejs/core@^0.14.7":
+  version "0.14.7"
+  resolved "https://registry.yarnpkg.com/@cornerstonejs/core/-/core-0.14.7.tgz#47d8da6b6372cfa7ac57aaf82e2db573b7ef48ca"
+  integrity sha512-I5Spvtv4UahnBE2wz9BEf2FfnyKivIdT6GJLcdnl4C1iWL5DTheLLSSLxGS8JC44xJW43NwuUgbFGJ1Lbd0JXg==
+  dependencies:
+    detect-gpu "^4.0.7"
+    lodash.clonedeep "4.5.0"
+
+"@cornerstonejs/core@^0.15.0", "@cornerstonejs/core@^0.15.3":
   version "0.15.3"
   resolved "https://registry.npmjs.org/@cornerstonejs/core/-/core-0.15.3.tgz#ab7a960fe74641c0f183b391f0c11b6f353af248"
   integrity sha512-W6SiJfN3BvC8JWpUnWJzRFbQfP45qU/myKrum7kUyNyvwxyFnAaENYFpnq2FXCUS24HYRXCp4uc+C4dHDQpAFA==
@@ -2313,6 +2321,24 @@
   dependencies:
     "@cornerstonejs/core" "^0.15.3"
     cornerstone-wado-image-loader "^4.2.1"
+
+"@cornerstonejs/tools@0.22.0":
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/@cornerstonejs/tools/-/tools-0.22.0.tgz#357d4411fe38a1148d92587a2031b1d3a29e5fbb"
+  integrity sha512-C8PirK0+JQRYb/BNRHoG6AoCt2YIAtbikbsVwNu90mSa8fFUXo8vHGz4pfXU0FGfl7yTdKCSJmEOZr9HoEJOlQ==
+  dependencies:
+    "@cornerstonejs/core" "^0.15.0"
+    lodash.clonedeep "4.5.0"
+    lodash.get "^4.4.2"
+
+"@cornerstonejs/tools@^0.21.3":
+  version "0.21.11"
+  resolved "https://registry.yarnpkg.com/@cornerstonejs/tools/-/tools-0.21.11.tgz#783022299d9820c3d46f4fc5c8de316c43ec1b51"
+  integrity sha512-9CKCKg0Jp6wXB/sto0zn9PCJFGk2CZz9eBxpjRL99n476LAE0wDSgVTOZ7p3FTtry7GGk48F+MCU6HEy/+TZ4A==
+  dependencies:
+    "@cornerstonejs/core" "^0.14.7"
+    lodash.clonedeep "4.5.0"
+    lodash.get "^4.4.2"
 
 "@cornerstonejs/tools@^0.23.3":
   version "0.23.3"
@@ -4452,6 +4478,38 @@
   version "1.0.0-next.21"
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
+
+"@radicalimaging/config-mode@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@radicalimaging/config-mode/-/config-mode-3.3.0.tgz#3c4b71c8506998f2231a0d24870726634ea7eeb5"
+  integrity sha512-mgRKYytRj3HY8az26Nkd7IhzLMoWWjrhKkvHIEVu3b7toPJ8MR96jXZUljoWf7O8pG8/R0CSEII3Vi2JbTcO7Q==
+  dependencies:
+    "@babel/runtime" "7.7.6"
+    "@cornerstonejs/tools" "^0.21.3"
+    config-point "^0.4.8"
+    gl-matrix "^3.4.3"
+    lodash "^4.17.21"
+    lodash.clonedeep "^4.5.0"
+    lodash.get "^4.4.2"
+
+"@radicalimaging/hp-extension@^3.3.1":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@radicalimaging/hp-extension/-/hp-extension-3.3.3.tgz#0318f2384c128138296273b67254d02db058c656"
+  integrity sha512-FVBwA0xbBSNoeqIPIpquD2OI8kSp0SeU4T19m36TLB//qIwsgpVyWn2N/beU7BS2HM/+NF7ki17PKW1gI+KRxQ==
+  dependencies:
+    "@babel/runtime" "7.7.6"
+    "@cornerstonejs/tools" "0.22.0"
+    config-point "^0.4.8"
+    lodash "^4.17.21"
+
+"@radicalimaging/hp-mode@^3.3.2":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@radicalimaging/hp-mode/-/hp-mode-3.3.3.tgz#3f797e1a0a398556113b074e2373495828511133"
+  integrity sha512-yYl9IEdFklLAY3TDGtYJNlmMQ+AI+bL53iU1NwW5A6uqk+90JRoAcoGoG0vok25OY5TB3aFhZ1c1M3WipMZpjw==
+  dependencies:
+    "@babel/runtime" "7.7.6"
+    "@radicalimaging/config-mode" "^3.3.0"
+    config-point "^0.4.8"
 
 "@reach/router@^1.3.4":
   version "1.3.4"
@@ -12476,7 +12534,7 @@ gitignore@^0.7.0:
   resolved "https://registry.yarnpkg.com/gitignore/-/gitignore-0.7.0.tgz#062173df62344a572dfd76d98b59c45108562739"
   integrity sha512-6iE891OyeYQYVvdoWI/hcxDWJ0sOngSpIRadxLoYbsnZdqWIUsEfx+IrOpW3d/zWBA/eKYvs6ZZx6ogz2wEGoQ==
 
-gl-matrix@3.4.3, gl-matrix@^3.1.0:
+gl-matrix@3.4.3, gl-matrix@^3.1.0, gl-matrix@^3.4.3:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-3.4.3.tgz#fc1191e8320009fd4d20e9339595c6041ddc22c9"
   integrity sha512-wcCp8vu8FT22BnvKVPjXa/ICBWRq/zjFfdofZy1WSpQZpphblv12/bOQLBC1rMM7SGOFS9ltVmKOHil5+Ml7gA==

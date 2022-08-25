@@ -92,6 +92,7 @@ function modeFactory({ modeConfiguration }) {
 
       ToolBarService.init(extensionManager);
       ToolBarService.addButtons(toolbarButtons);
+
       ToolBarService.createButtonSection('primary', [
         'MeasurementTools',
         'Zoom',
@@ -101,6 +102,8 @@ function modeFactory({ modeConfiguration }) {
         'Layout',
         'MoreTools',
       ]);
+
+
     },
     onModeExit: ({ servicesManager }) => {
       const {
