@@ -76,12 +76,19 @@ class CornerstoneCacheService {
 
     viewportData.viewportType = cs3DViewportType;
 
+    return viewportData;
+  }
+
+  /**
+   * Sets the viewport data for the given viewport.  This will broadcast
+   * the data changed event on that viewport.
+   */
+  public setViewportData(viewportData, viewportIndex) {
     this._broadcastEvent(this.EVENTS.VIEWPORT_DATA_CHANGED, {
       viewportData,
       viewportIndex,
     });
 
-    return viewportData;
   }
 
   public async invalidateViewportData(

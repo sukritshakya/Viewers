@@ -18,6 +18,7 @@ import dicomLoaderService from './utils/dicomLoaderService';
 import { registerColormap } from './utils/colormap/transferFunctionHelpers';
 
 import { id } from './id';
+import CornerstoneCache from './services/ViewportService/CornerstoneCacheService';
 
 const Component = React.lazy(() => {
   return import(
@@ -31,6 +32,13 @@ const OHIFCornerstoneViewport = props => {
       <Component {...props} />
     </React.Suspense>
   );
+};
+
+const registerCacheService = {
+  name: 'cornerstoneCacheService',
+  create: () => {
+    return CornerstoneCache;
+  },
 };
 
 /**
@@ -51,8 +59,8 @@ const cornerstoneExtension = {
     });
   },
 
+
   /**
-   *
    *
    * @param {object} [configuration={}]
    * @param {object|array} [configuration.csToolsConfig] - Passed directly to `initCornerstoneTools`
@@ -66,6 +74,7 @@ const cornerstoneExtension = {
     servicesManager.registerService(
       CornerstoneViewportService(servicesManager)
     );
+    servicesManager.registerService(registerCacheService);
     servicesManager.registerService(ToolGroupService(servicesManager));
     servicesManager.registerService(SyncGroupService(servicesManager));
     await init({ servicesManager, commandsManager, configuration, appConfig });
