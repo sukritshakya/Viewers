@@ -18,7 +18,7 @@ import dicomLoaderService from './utils/dicomLoaderService';
 import { registerColormap } from './utils/colormap/transferFunctionHelpers';
 
 import { id } from './id';
-import CornerstoneCache from './services/ViewportService/CornerstoneCacheService';
+import { registerCacheService } from './services/ViewportService/CornerstoneCacheService';
 
 const Component = React.lazy(() => {
   return import(
@@ -32,13 +32,6 @@ const OHIFCornerstoneViewport = props => {
       <Component {...props} />
     </React.Suspense>
   );
-};
-
-const registerCacheService = {
-  name: 'cornerstoneCacheService',
-  create: () => {
-    return CornerstoneCache;
-  },
 };
 
 /**

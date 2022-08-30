@@ -218,23 +218,22 @@ const OHIFCornerstoneViewport = React.memo(props => {
     }
 
     const loadViewportData = async () => {
-      const viewportDataLoaded = await CornerstoneCacheService.getViewportData(
+      await CornerstoneCacheService.getViewportData(
         viewportIndex,
         displaySets,
         viewportOptions.viewportType,
         dataSource,
+        (viewportDataLoaded) => {
+          CornerstoneViewportService.setViewportDisplaySets(
+            viewportIndex,
+            viewportDataLoaded,
+            viewportOptions,
+            displaySetOptions
+          );
+          setViewportData(viewportDataLoaded);
+        },
         initialImageIndex
       );
-
-      CornerstoneViewportService.setViewportDisplaySets(
-        viewportIndex,
-        viewportDataLoaded,
-        viewportOptions,
-        displaySetOptions
-      );
-
-      setViewportData(viewportDataLoaded);
-      CornerstoneCacheService.setViewportData(viewportDataLoaded, viewportIndex);
     };
 
     loadViewportData();
