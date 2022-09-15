@@ -1,5 +1,16 @@
 window.config = {
   routerBasename: '/',
+  whiteLabeling: {
+    createLogoComponentFn: function (React) {
+      return React.createElement(
+        'h5',
+        {
+          className: 'text-white'
+        },
+        'TERAHS | WEB VIEWER'
+      );
+    },
+  },
   showStudyList: true,
   extensions: [],
   modes: [],

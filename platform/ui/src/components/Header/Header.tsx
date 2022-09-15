@@ -36,9 +36,9 @@ function Header({ children, menuOptions, isReturnEnabled, onClickReturnButton, i
         <div className="flex items-center">{children}</div>
         <div className="flex items-center">
           <span className="mr-3 text-lg text-common-light">
-            {t('INVESTIGATIONAL USE ONLY')}
+            {t('Version 0.1.0')}
           </span>
-          <Dropdown id="options" showDropdownIcon={false} list={menuOptions}>
+          {/* <Dropdown id="options" showDropdownIcon={false} list={menuOptions}>
             <IconButton
               id={"options-settings-icon"}
               variant="text"
@@ -57,7 +57,7 @@ function Header({ children, menuOptions, isReturnEnabled, onClickReturnButton, i
             >
               <Icon name="chevron-down" />
             </IconButton>
-          </Dropdown>
+          </Dropdown> */}
         </div>
       </div>
     </NavBar>
